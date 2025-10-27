@@ -10,7 +10,8 @@ function Home() {
   return (
     <div className="home">
       <div className="home-container">
-        <h1 className="home-title">Facility Maintenance System</h1>
+        <h1 className="home-title">Real-time Breakdown Reporting and
+Maintenance System</h1>
         <p className="home-subtitle">Choose your application to get started</p>
 
         <div className="cards">
