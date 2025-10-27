@@ -4,14 +4,14 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ReporterApp from "./pages/ReporterApp";
 import ManagerApp from "./pages/ManagerApp";
+import TechnicianApp from "./pages/TechnicianApp";
 import "./index.css";
 
 function Home() {
   return (
     <div className="home">
       <div className="home-container">
-        <h1 className="home-title">Real-time Breakdown Reporting and
-Maintenance System</h1>
+        <h1 className="home-title">Real-time Breakdown Reporting and Maintenance System</h1>
         <p className="home-subtitle">Choose your application to get started</p>
 
         <div className="cards">
@@ -60,6 +60,18 @@ Maintenance System</h1>
             <h3>Maintenance Manager</h3>
             <p>Manage and assign maintenance tasks</p>
           </Link>
+          
+          <Link to="/technician" className="card">
+            <div className="icon blue" aria-hidden>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M12 2v6" />
+                <path d="M5 8v6a7 7 0 0 0 14 0V8" />
+                <path d="M7 12h10" />
+              </svg>
+            </div>
+            <h3>Technician Console</h3>
+            <p>View assigned repairs and update progress</p>
+          </Link>
         </div>
       </div>
     </div>
@@ -73,6 +85,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/" element={<Home />} />
         <Route path="/reporter/*" element={<ReporterApp />} />
         <Route path="/manager/*" element={<ManagerApp />} />
+        <Route path="/technician/*" element={<TechnicianApp />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
